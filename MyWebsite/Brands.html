@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRANDS</title>
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: rgb(50, 144, 248);
+    }
+    .center {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      width: 350px;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: white;
+      font-family: poppins;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    }
+    .top {
+      width: 100%;
+      height: fit-content;
+    }
+    .top img {
+      width: 100%;
+    }
+    .top .title {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0px 25px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+    .bottom {
+      width: 100%;
+      height: fit-content;
+      box-sizing: border-box;
+      padding: 0 25px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s ease-in-out;
+    }
+    .card:hover .bottom {
+      max-height: 250px;
+    }
+    .card:not(:hover) .top .title {
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .bottom .time {
+      font-size: 12px;
+      color: rgb(150, 150, 150);
+      margin: 5px 0;
+      margin-bottom: 20px;
+    }
+    .bottom .desc {
+      width: 100%;
+      font-size: 13px;
+      text-align: justify;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+    .details {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      margin-right: 25px;
+      font-size: 12px;
+      color: rgb(150, 150, 150);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .item span {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+    .bottom button {
+      float: right;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+      outline: none;
+      font-family: poppins;
+      cursor: pointer;
+    }
+    .bottom button span {
+      font-size: 20px;
+      margin-left: 5px;
+      animation: slide 1.5s infinite;
+    }
+    @keyframes slide {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(5px);
+      }
+    }
+  </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <section>
+        <div class="container-fluid bg-secondary">
+            <!--Container word is used when we have to left the margin from both side and Container-fluid word is used when no margin is left.-->
+            <div class="row">
+                <div class="col-md-12 text-dark text-center">
+                    <span style="font-weight: 800;">Best Perfumes</span>             
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--First section closed.-->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid mb-3 mt-3">
+                <div class="row">
+                    <div class="col-md-6" style="text-align: center;">
+                        <img src="pic.png" width="400" height="50">
+                    </div>
+                    <div class="col-md-6" >
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active text-light" aria-current="page" href="index.html">HOME</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link text-light" href="#">ABOUT</a >
+                              </li>
+                              <li class="nav-item"> 
+                                <a href="#" class="nav-link text-light">BRANDS</a>
+                              </li>
+                              <li class="nav-item"> 
+                                <a href="#" class="nav-link text-light">SERVICES</a>
+                              </li>
+                              <li class="nav-item "> 
+                                <a href="#" class="nav-link text-light">CONTACT</a>
+                              </li>
+                              <li class="nav-item "> 
+                                <button class="btnlogin-popup text-light text-left" style="background-color: transparent; font-style: oblique;font-weight: 500; height:50px ; width: 100px;"><a href="Login.html">LOGIN</a></button>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <br/> 
+    <section>
+        <!-- This code is copied from bootstrap crousel 5 first link-->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./images/perfume.avif" class="d-block w-100" alt="..." height="500" width="1920">
+            </div> 
+          </div>
+        </div>
+    </section>
+    <br/>
+    <section>
+      <div class="container-fluid bg-dark text-light">
+        <div class="row">
+          <div class="col-md-4 mt-3" >
+            <div class="center">
+              <div class="card">
+                <div class="top">
+                  <img src="./images/Valent.jpg" alt="image" />
+                  <div class="title">Valentino</div>
+                </div>
+        
+                <div class="bottom">
+                  <div class="time">2 days ago</div>
+                  <div class="desc">
+                    Valentino presents a bouquet of fragrances, including the best-selling Donna Eau de Parfum. 
+                    This exquisite scent is designed to accentuate a woman’s natural allure and sophistication.
+                    Valentino’s fragrances are a testament to the brand’s dedication to craftsmanship and artistry, mirroring the same passion that has defined its fashion since its inception.
+                  </div>
+                 
+                  <button>
+                    <a href="https://www.scentstore.com/brands/valentino" >Read more</a>
+                    <span class="material-icons-round"> east </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3">
+            <div class="center">
+              <div class="card">
+                <div class="top">
+                  <img src="./images/guerlain.jpg" alt="image" />
+                  <div class="title">Guerlain</div>
+                </div>
+        
+                <div class="bottom">
+                  <div class="time">2 days ago</div>
+                  <div class="desc">
+                    Guerlain is famous with beauty and luxury in fashion, makeup, and fragrance. In 1828, Pierre-Frangoise-Pascal Guerlain opened his first boutique in Paris.
+                    Since then, the Guerlain name has been inseperable with objects imbued with beauty, originality, and passion.
+                  </div>
+                
+                  <button>
+                    <a href="https://www.scentstore.com/brands/guerlain">Read more</a>
+                    <span class="material-icons-round"> east </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3">
+            <div class="center">
+              <div class="card">
+                <div class="top">
+                  <img src="./images/lancome.jpg" alt="image" />
+                  <div class="title">Lancome</div>
+                </div>
+        
+                <div class="bottom">
+                  <div class="time">2 days ago</div>
+                  <div class="desc">
+                    Lancôme’s most iconic and best-selling perfume ranges is “La Vie Est Belle,” translating to “Life is Beautiful.” 
+                    This fragrance has captivated women around the world with its sweet and floral notes, celebrating the beauty of life.
+                  </div>
+                  
+                  <button>
+                    <a href="https://www.scentstore.com/brands/lancome">Read More</a>
+                    <span class="material-icons-round"> east </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mt-3 mb-3" >
+            <div class="center">
+              <div class="card">
+                <div class="top">
+                  <img src="./images/billie.jpg" alt="image" />
+                  <div class="title">Billie-Eilish</div>
+                </div>
+        
+                <div class="bottom">
+                  <div class="time">2 days ago</div>
+                  <div class="desc">
+                    Billie Eilish is an affordable fragrance line for everyone, especially when looking for an autumn/winter or evening fragrance, making it perfect for yourself or as a gift for any occasion.
+                    <br/>
+                    <i>“I wanted it to feel like a warm embrace. It’s a scent that I’ve been chasing for years and years and years. It’s my favorite smell in the world.” – Billie Eilish</i>
+                  </div>
+                 
+                  <button>
+                    <a href="https://www.scentstore.com/brands/billie-eilish-perfume" >Read more</a>
+                    <span class="material-icons-round"> east </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3 mb-3">
+            <div class="center">
+              <div class="card">
+                <div class="top">
+                  <img src="./images/CK.webp" alt="image" />
+                  <div class="title">Calvin Klein</div>
+                </div>
+        
+                <div class="bottom">
+                  <div class="time">2 days ago</div>
+                  <div class="desc">
+                    Launching his label with a line of men and women’s coats in 1968, Calvin Klein saw his clean and classic styles become truly iconic. 
+                    Developing into one of the greatest American fashion houses and lifestyle brands, the label became known as much for its minimalist fashions as for its groundbreaking advertising campaigns.
+                  </div>
+                
+                  <button>
+                    <a href="https://www.scentstore.com/brands/calvin-klein">Read more</a>
+                    <span class="material-icons-round"> east </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3 mb-3">
+            <div class="center">
+              <div class="card">
+                <div class="top">
+                  <img src="./images/CH.jpg" alt="image" />
+                  <div class="title">Carolina Herrera</div>
+                </div>
+        
+                <div class="bottom">
+                  <div class="time">2 days ago</div>
+                  <div class="desc">
+                    Carolina Herrera, a renowned name in the world of fashion and luxury, has seamlessly translated her iconic style into an exquisite line of perfumes and fragrances for both men and women.
+                    With a rich history dating back to the 1980s, the Carolina Herrera brand has consistently epitomised elegance and exclusivity in the realm of scents.
+                  </div>
+                  
+                  <button>
+                    <a href="https://www.scentstore.com/brands/carolina-herrera">Read More</a>
+                    <span class="material-icons-round"> east </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mt-3 mb-3">
+            <div class="center">
+              <div class="card">
+                <div class="top">
+                  <img src="./images/bvlgari.jpg" alt="image" />
+                  <div class="title">Bvlgari</div>
+                </div>
+        
+                <div class="bottom">
+                  <div class="time">2 days ago</div>
+                  <div class="desc">
+                    Bvlgari, a renowned Italian luxury brand, has left an indelible mark in the world of fragrances with its exquisite line of perfumes, fragrances, and aftershaves for both men and women.
+                    Established in 1884, Bvlgari has a rich history of creating iconic scents that reflect the brand’s commitment to elegance and opulence.
+                  </div>
+                  
+                  <button>
+                    <a href="https://www.scentstore.com/brands/bvlgari-perfume-aftershave">Read More</a>
+                    <span class="material-icons-round"> east </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3 mb-3">
+            <div class="center">
+              <div class="card">
+                <div class="top">
+                  <img src="./images/prada.jpg" alt="image" />
+                  <div class="title">Prada</div>
+                </div>
+        
+                <div class="bottom">
+                  <div class="time">2 days ago</div>
+                  <div class="desc">
+                    The Prada fragrance and fashion house was founded in Milan in 1913, has seamlessly extended its expertise into the world of perfumery with fragrances for both men and women.
+                     Drawing on its rich heritage of elegance and innovation, Prada’s perfume and aftershave offerings have earned a place in the hearts of fragrance enthusiasts worldwide.
+                  </div>
+                  
+                  <button>
+                    <a href="https://www.scentstore.com/brands/prada/">Read More</a>
+                    <span class="material-icons-round"> east </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3 mb-3">
+            <div class="center">
+              <div class="card">
+                <div class="top">
+                  <img src="./images/armani.jpg" alt="image" />
+                  <div class="title">Giorgio Armani</div>
+                </div>
+        
+                <div class="bottom">
+                  <div class="time">2 days ago</div>
+                  <div class="desc">
+                    Giorgio Armani, a renowned name in the world of fashion, introduced a line of fragrances that reflect the same elegance and sophistication as his clothing designs.
+                    For both men and women, Armani offers a wide range of perfumes and aftershaves that have become iconic in the world of fragrance.
+                  </div>
+                  
+                  <button>
+                    <a href="https://www.scentstore.com/brands/giorgio-armani/">Read More</a>
+                    <span class="material-icons-round"> east </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    <br/>
+    <section>
+        <div class="container-fluid bg-dark text-light">
+            <div class="row">
+              <div class="col-md-12 mt-5">
+                <h1 style="text-align: center;">KEEP UPDATED</h1>
+                <br/>
+                <h5 style="text-align: center;">With all the latest releases, offers and competitions</h5>
+                <br/>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-8">                           
+                <form class="d-flex ">
+                  <input class="form-control me-2 " type="search" placeholder="Your Email" aria-label="Search">
+                  <button class="btn btn-outline-danger " type="submit"><b>SignUp Today</b></button>
+                </form>
+              </div>
+              <div class="col-md-2"></div>
+              <br/>
+              <br/><br/><br/>
+              <div class="col-md-3 ml-1 mt-5" >
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>About Us</h3>
+                  </div>
+                  <div class="col-md-12">
+                    <p  style="text-align:justify">
+                        Established over 20 years ago in Truro, Cornwall, we are one of the UK’s leading independent high street perfumeries, selling all the new and latest released perfumes and fragrances for men and women from the most exclusive and luxurious brands. Excellent customer service, top quality products.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mt-5" >
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>Quick Access.</h3>
+                  </div>
+                  <div class="col-md-12">
+                    <p><a href="HOME.html" style="color:white">Home</a></p>
+                    <p><a href="#about" style="color:white">About</a></p>
+                    <p><a href="#brands" style="color:white">Brands</a></p>
+                    <p><a href="#news" style="color:white">Beauty news</a></p>
+                    <p><a href="Privacy_policy.html" style="color:white">Privacy & Policy</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mt-5" >
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>Details</h3>
+                  </div>
+                  <div class="col-md-12">
+                    <p style="font-size:20px">Mobile:
+                      <span style="font-size:15px">01872 263663</span>
+                    </p>
+                    <p style="font-size:20px">Email:
+                      <span style="font-size:15px">sales@scentstore.com</span>
+                    </p>
+                    <p style="font-size:20px">Address:
+                      <span style="font-size:15px"> Scentstore, 10-11 Cathedral Lane, Truro, TR1 2QS.</span>
+                    </p>
+                    <p style="font-size:20px">Web Link:
+                     <a href="Home.html" ><span style="font-size:10px color=white">ScentStore.com</span></a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mt-5 mb-5" >
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>Contact</h3>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Enter Your Name" >
+                    <br/>
+                    <input type="text" class="form-control" placeholder="Enter Your Mobile.">
+                    <br/>
+                    <textarea class="form-control" row="1" placeholder="EnterQuery"></textarea>
+                    <br/>
+                    <button type="button" class="btn btn-sm btn-success">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <section>
+        <div class="container-fluid bg-dark">
+          <div class="row">
+            <div class="col-md-12">
+              <h5 class="text-center" style="color:rgb(231, 231, 240);font-size: x-small;">Scentstore Limited 05917335 | VAT number GB 868 9800 60 | © Scentstore 1996-2024 | All rights reserved. Registered Address: Scentstore, 10-11 Cathedral Lane, Truro, TR1 2QS | Tel: 01872 263663 | Email:<br/> sales@scentstore.com</h5>
+            </div>
+          </div>
+        </div>
+    </section>
+</body>
+</html>
